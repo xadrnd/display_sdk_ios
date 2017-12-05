@@ -8,11 +8,11 @@
       s.license      = { :type => "BSD", :file => "LICENSE.md" }
       s.author       = { "GroundTruth" => "sdk@groundtruth.com" }
       s.platform     = :ios
-      s.ios.deployment_target = '8.0'
+      s.ios.deployment_target = '9.0'
       s.source = {
         :git => 'https://github.com/xadrnd/display_sdk_ios.git', :tag => 'v1.1.8' 
       }
-      s.source_files = 'XADDisplaySdk/XADDisplaySdk/**/*.swift'
+      s.source_files = 'XADDisplaySdk/XADDisplaySdk/**/*.{h,m,swift}'
       s.resources = 'XADDisplaySdk/XADDisplaySdk/**/Resources/*.{png,js,xsd}'
       
         s.frameworks = 'SafariServices', 'WebKit', 'UIKit', 'CoreLocation', 'SystemConfiguration', 'Foundation'

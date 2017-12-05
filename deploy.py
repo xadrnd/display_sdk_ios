@@ -80,11 +80,11 @@ if __name__ == "__main__":
       s.license      = { :type => "%s", :file => "LICENSE.md" }
       s.author       = { "GroundTruth" => "sdk@groundtruth.com" }
       s.platform     = :ios
-      s.ios.deployment_target = '8.0'
+      s.ios.deployment_target = '9.0'
       s.source = {
         :git => 'https://github.com/xadrnd/display_sdk_ios.git', :tag => 'v%s' 
       }
-      s.source_files = '%s/%s/**/*.swift'
+      s.source_files = '%s/%s/**/*.{h,m,swift}'
       s.resources = '%s/%s/**/Resources/*.{png,js,xsd}'
       %s
     end
