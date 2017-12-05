@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B70A64FC1EA73F1E0095135C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B70A64FB1EA73F1E0095135C /* CoreLocation.framework */; };
+		B70A64FE1EA73F430095135C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B70A64FD1EA73F430095135C /* UIKit.framework */; };
+		B70A65001EA73F4B0095135C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B70A64FF1EA73F4B0095135C /* WebKit.framework */; };
+		B70A65031EA742C10095135C /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B70A65021EA742C10095135C /* SafariServices.framework */; };
+		B710B1601E1C86D10058ACF3 /* XADLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B710B15F1E1C86D10058ACF3 /* XADLocationManager.swift */; };
+		B710B1651E1C8D760058ACF3 /* XADNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B710B1641E1C8D760058ACF3 /* XADNetworkManager.swift */; };
+		B7150FD31E3A9E7600D8D82E /* XADMRAIDModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7150FB61E3A9E7600D8D82E /* XADMRAIDModalViewController.swift */; };
+		B7150FD41E3A9E7600D8D82E /* XADMRAIDOrientationProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7150FB71E3A9E7600D8D82E /* XADMRAIDOrientationProperties.swift */; };
+		B7150FD51E3A9E7600D8D82E /* XADMRAIDParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7150FB81E3A9E7600D8D82E /* XADMRAIDParser.swift */; };
+		B7150FD61E3A9E7600D8D82E /* XADMRAIDResizeProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7150FB91E3A9E7600D8D82E /* XADMRAIDResizeProperties.swift */; };
+		B7150FD71E3A9E7600D8D82E /* XADMRAIDServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7150FBA1E3A9E7600D8D82E /* XADMRAIDServiceDelegate.swift */; };
+		B7150FD81E3A9E7600D8D82E /* XADMRAIDSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7150FBB1E3A9E7600D8D82E /* XADMRAIDSettings.swift */; };
+		B7150FD91E3A9E7600D8D82E /* XADMRAIDUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7150FBC1E3A9E7600D8D82E /* XADMRAIDUtil.swift */; };
+		B7150FDA1E3A9E7600D8D82E /* XADMRAIDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7150FBD1E3A9E7600D8D82E /* XADMRAIDView.swift */; };
+		B7150FDC1E3A9E7600D8D82E /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7150FC01E3A9E7600D8D82E /* Toast.swift */; };
+		B7150FDD1E3A9E7600D8D82E /* XADBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7150FC11E3A9E7600D8D82E /* XADBrowser.swift */; };
+		B7150FDE1E3A9E7600D8D82E /* XADBrowserControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7150FC21E3A9E7600D8D82E /* XADBrowserControlsView.swift */; };
+		B7150FDF1E3A9E7600D8D82E /* XADLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7150FC31E3A9E7600D8D82E /* XADLogger.swift */; };
+		B7150FE01E3A9E7600D8D82E /* IOSVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7150FC51E3A9E7600D8D82E /* IOSVersion.swift */; };
+		B7150FE21E3A9E7600D8D82E /* XADVAST2Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7150FC71E3A9E7600D8D82E /* XADVAST2Parser.swift */; };
+		B7150FE41E3A9E7600D8D82E /* XADVASTError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7150FC91E3A9E7600D8D82E /* XADVASTError.swift */; };
+		B7150FE51E3A9E7600D8D82E /* XADVASTEventProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7150FCA1E3A9E7600D8D82E /* XADVASTEventProcessor.swift */; };
+		B7150FE61E3A9E7600D8D82E /* XADVASTMediaFilePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7150FCB1E3A9E7600D8D82E /* XADVASTMediaFilePicker.swift */; };
+		B7150FE71E3A9E7600D8D82E /* XADVASTSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7150FCC1E3A9E7600D8D82E /* XADVASTSettings.swift */; };
+		B7150FE81E3A9E7600D8D82E /* XADVASTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7150FCD1E3A9E7600D8D82E /* XADVASTViewController.swift */; };
+		B7150FE91E3A9E7600D8D82E /* XADVASTXMLUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = B7150FCE1E3A9E7600D8D82E /* XADVASTXMLUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B7150FEA1E3A9E7600D8D82E /* XADVASTXMLUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B7150FCF1E3A9E7600D8D82E /* XADVASTXMLUtil.m */; };
+		B7150FEF1E3AA07800D8D82E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7150FEE1E3AA07800D8D82E /* Foundation.framework */; };
+		B7150FF11E3AA08000D8D82E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7150FF01E3AA08000D8D82E /* SystemConfiguration.framework */; };
+		B7150FF31E3AA12200D8D82E /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B7150FF21E3AA12200D8D82E /* libxml2.tbd */; };
+		B7150FF51E3AAC0500D8D82E /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7150FF41E3AAC0500D8D82E /* Reachability.swift */; };
+		B7150FFA1E3AAEBC00D8D82E /* XADVASTMediaFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7150FF71E3AAEBC00D8D82E /* XADVASTMediaFile.swift */; };
+		B7150FFB1E3AAEBC00D8D82E /* XADVASTModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7150FF81E3AAEBC00D8D82E /* XADVASTModel.swift */; };
+		B7150FFC1E3AAEBC00D8D82E /* XADVASTUrlWithId.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7150FF91E3AAEBC00D8D82E /* XADVASTUrlWithId.swift */; };
+		B7196D171E89A68000E038EF /* XADDisplayTestDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7196D161E89A68000E038EF /* XADDisplayTestDelegate.swift */; };
+		B7310CF41DA31BBB008CF7E1 /* XADInterstitial.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7310CF31DA31BBB008CF7E1 /* XADInterstitial.swift */; };
+		B7310CF61DA5ABAD008CF7E1 /* XADInterstitialDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7310CF51DA5ABAD008CF7E1 /* XADInterstitialDelegate.swift */; };
+		B734749E1D6D3A780067098C /* XADRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B734749D1D6D3A780067098C /* XADRequest.swift */; };
+		B73474D01D7F84AB0067098C /* XADErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73474CF1D7F84AB0067098C /* XADErrorCode.swift */; };
+		B73474D21D7F86630067098C /* XADBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73474D11D7F86630067098C /* XADBannerView.swift */; };
+		B73474D71D7F87F70067098C /* XADBannerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73474D61D7F87F70067098C /* XADBannerDelegate.swift */; };
+		B73474D91D7F8B980067098C /* XADBannerSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73474D81D7F8B980067098C /* XADBannerSize.swift */; };
+		B73474DB1D7FA6530067098C /* XADMRAIDServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73474DA1D7FA6530067098C /* XADMRAIDServiceProvider.swift */; };
+		B76F44041E1CAB0A003A40A8 /* XADURLGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F44031E1CAB0A003A40A8 /* XADURLGenerator.swift */; };
+		B78AE3A81D6D052400AB090E /* XADDisplaySdk.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78AE3A71D6D052400AB090E /* XADDisplaySdk.swift */; };
+		B798A3C61E9874B00000C993 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B798A3C51E9874B00000C993 /* Constants.swift */; };
+		B798A3CA1E9C96B10000C993 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B798A3C91E9C96B10000C993 /* UIViewExt.swift */; };
+		B7A8602B1D6CED2B00060850 /* XADDisplaySdk.h in Headers */ = {isa = PBXBuildFile; fileRef = B7A8602A1D6CED2B00060850 /* XADDisplaySdk.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B7D4E5771E93358C005EFA1C /* CloseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B7D4E56F1E93358C005EFA1C /* CloseButton.png */; };
+		B7D4E5781E93358C005EFA1C /* CloseButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7D4E5701E93358C005EFA1C /* CloseButton@2x.png */; };
+		B7D4E5791E93358C005EFA1C /* CloseButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7D4E5711E93358C005EFA1C /* CloseButton@3x.png */; };
+		B7D4E57A1E93358C005EFA1C /* infoButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B7D4E5721E93358C005EFA1C /* infoButton.png */; };
+		B7D4E57B1E93358C005EFA1C /* infoButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7D4E5731E93358C005EFA1C /* infoButton@2x.png */; };
+		B7D4E57C1E93358C005EFA1C /* infoButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7D4E5741E93358C005EFA1C /* infoButton@3x.png */; };
+		B7D4E57D1E93358C005EFA1C /* mraid.js in Resources */ = {isa = PBXBuildFile; fileRef = B7D4E5751E93358C005EFA1C /* mraid.js */; };
+		B7D4E57E1E93358C005EFA1C /* vast_schema.xsd in Resources */ = {isa = PBXBuildFile; fileRef = B7D4E5761E93358C005EFA1C /* vast_schema.xsd */; };
+		B7E477811E302D7F0035D3D3 /* XADVideoAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E477801E302D7F0035D3D3 /* XADVideoAd.swift */; };
+		B7E477831E302E3B0035D3D3 /* XADVideoAdDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E477821E302E3B0035D3D3 /* XADVideoAdDelegate.swift */; };
+		DCC23C191E9867C5009A45D2 /* XADErrorPosting.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC23C181E9867C5009A45D2 /* XADErrorPosting.swift */; };
+		DCC23C1B1E98727C009A45D2 /* XADUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC23C1A1E98727C009A45D2 /* XADUtils.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B70A64FB1EA73F1E0095135C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B70A64FD1EA73F430095135C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B70A64FF1EA73F4B0095135C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		B70A65021EA742C10095135C /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		B710B15F1E1C86D10058ACF3 /* XADLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XADLocationManager.swift; sourceTree = "<group>"; };
+		B710B1641E1C8D760058ACF3 /* XADNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XADNetworkManager.swift; sourceTree = "<group>"; };
+		B7150FB61E3A9E7600D8D82E /* XADMRAIDModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XADMRAIDModalViewController.swift; sourceTree = "<group>"; };
+		B7150FB71E3A9E7600D8D82E /* XADMRAIDOrientationProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XADMRAIDOrientationProperties.swift; sourceTree = "<group>"; };
+		B7150FB81E3A9E7600D8D82E /* XADMRAIDParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XADMRAIDParser.swift; sourceTree = "<group>"; };
+		B7150FB91E3A9E7600D8D82E /* XADMRAIDResizeProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XADMRAIDResizeProperties.swift; sourceTree = "<group>"; };
+		B7150FBA1E3A9E7600D8D82E /* XADMRAIDServiceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = XADMRAIDServiceDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B7150FBB1E3A9E7600D8D82E /* XADMRAIDSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XADMRAIDSettings.swift; sourceTree = "<group>"; };
+		B7150FBC1E3A9E7600D8D82E /* XADMRAIDUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XADMRAIDUtil.swift; sourceTree = "<group>"; };
+		B7150FBD1E3A9E7600D8D82E /* XADMRAIDView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = XADMRAIDView.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B7150FC01E3A9E7600D8D82E /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Toast.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B7150FC11E3A9E7600D8D82E /* XADBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = XADBrowser.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B7150FC21E3A9E7600D8D82E /* XADBrowserControlsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = XADBrowserControlsView.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B7150FC31E3A9E7600D8D82E /* XADLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XADLogger.swift; sourceTree = "<group>"; };
+		B7150FC51E3A9E7600D8D82E /* IOSVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOSVersion.swift; sourceTree = "<group>"; };
+		B7150FC71E3A9E7600D8D82E /* XADVAST2Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XADVAST2Parser.swift; sourceTree = "<group>"; };
+		B7150FC91E3A9E7600D8D82E /* XADVASTError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XADVASTError.swift; sourceTree = "<group>"; };
+		B7150FCA1E3A9E7600D8D82E /* XADVASTEventProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XADVASTEventProcessor.swift; sourceTree = "<group>"; };
+		B7150FCB1E3A9E7600D8D82E /* XADVASTMediaFilePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XADVASTMediaFilePicker.swift; sourceTree = "<group>"; };
+		B7150FCC1E3A9E7600D8D82E /* XADVASTSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XADVASTSettings.swift; sourceTree = "<group>"; };
+		B7150FCD1E3A9E7600D8D82E /* XADVASTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = XADVASTViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B7150FCE1E3A9E7600D8D82E /* XADVASTXMLUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XADVASTXMLUtil.h; sourceTree = "<group>"; };
+		B7150FCF1E3A9E7600D8D82E /* XADVASTXMLUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XADVASTXMLUtil.m; sourceTree = "<group>"; };
+		B7150FEE1E3AA07800D8D82E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B7150FF01E3AA08000D8D82E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B7150FF21E3AA12200D8D82E /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		B7150FF41E3AAC0500D8D82E /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		B7150FF71E3AAEBC00D8D82E /* XADVASTMediaFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XADVASTMediaFile.swift; sourceTree = "<group>"; };
+		B7150FF81E3AAEBC00D8D82E /* XADVASTModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XADVASTModel.swift; sourceTree = "<group>"; };
+		B7150FF91E3AAEBC00D8D82E /* XADVASTUrlWithId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XADVASTUrlWithId.swift; sourceTree = "<group>"; };
+		B7196D161E89A68000E038EF /* XADDisplayTestDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XADDisplayTestDelegate.swift; sourceTree = "<group>"; };
+		B7310CF31DA31BBB008CF7E1 /* XADInterstitial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = XADInterstitial.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B7310CF51DA5ABAD008CF7E1 /* XADInterstitialDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = XADInterstitialDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B734749D1D6D3A780067098C /* XADRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = XADRequest.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B73474CF1D7F84AB0067098C /* XADErrorCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = XADErrorCode.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B73474D11D7F86630067098C /* XADBannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = XADBannerView.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B73474D61D7F87F70067098C /* XADBannerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = XADBannerDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B73474D81D7F8B980067098C /* XADBannerSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = XADBannerSize.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B73474DA1D7FA6530067098C /* XADMRAIDServiceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = XADMRAIDServiceProvider.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B76F44031E1CAB0A003A40A8 /* XADURLGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XADURLGenerator.swift; sourceTree = "<group>"; };
+		B78AE3A71D6D052400AB090E /* XADDisplaySdk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = XADDisplaySdk.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B798A3C51E9874B00000C993 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B798A3C91E9C96B10000C993 /* UIViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
+		B7A860271D6CED2B00060850 /* XADDisplaySdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XADDisplaySdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7A8602A1D6CED2B00060850 /* XADDisplaySdk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = XADDisplaySdk.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		B7A8602C1D6CED2B00060850 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7D4E56F1E93358C005EFA1C /* CloseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseButton.png; sourceTree = "<group>"; };
+		B7D4E5701E93358C005EFA1C /* CloseButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CloseButton@2x.png"; sourceTree = "<group>"; };
+		B7D4E5711E93358C005EFA1C /* CloseButton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CloseButton@3x.png"; sourceTree = "<group>"; };
+		B7D4E5721E93358C005EFA1C /* infoButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = infoButton.png; sourceTree = "<group>"; };
+		B7D4E5731E93358C005EFA1C /* infoButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "infoButton@2x.png"; sourceTree = "<group>"; };
+		B7D4E5741E93358C005EFA1C /* infoButton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "infoButton@3x.png"; sourceTree = "<group>"; };
+		B7D4E5751E93358C005EFA1C /* mraid.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = mraid.js; sourceTree = "<group>"; };
+		B7D4E5761E93358C005EFA1C /* vast_schema.xsd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = vast_schema.xsd; sourceTree = "<group>"; };
+		B7E477801E302D7F0035D3D3 /* XADVideoAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = XADVideoAd.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B7E477821E302E3B0035D3D3 /* XADVideoAdDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XADVideoAdDelegate.swift; sourceTree = "<group>"; };
+		DCC23C181E9867C5009A45D2 /* XADErrorPosting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = XADErrorPosting.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DCC23C1A1E98727C009A45D2 /* XADUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XADUtils.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B7A860231D6CED2B00060850 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B70A65031EA742C10095135C /* SafariServices.framework in Frameworks */,
+				B70A65001EA73F4B0095135C /* WebKit.framework in Frameworks */,
+				B70A64FE1EA73F430095135C /* UIKit.framework in Frameworks */,
+				B70A64FC1EA73F1E0095135C /* CoreLocation.framework in Frameworks */,
+				B7150FF31E3AA12200D8D82E /* libxml2.tbd in Frameworks */,
+				B7150FF11E3AA08000D8D82E /* SystemConfiguration.framework in Frameworks */,
+				B7150FEF1E3AA07800D8D82E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B7150FB21E3A9E7600D8D82E /* mraid */ = {
+			isa = PBXGroup;
+			children = (
+				B7150FBD1E3A9E7600D8D82E /* XADMRAIDView.swift */,
+				B7150FB61E3A9E7600D8D82E /* XADMRAIDModalViewController.swift */,
+				B7150FB71E3A9E7600D8D82E /* XADMRAIDOrientationProperties.swift */,
+				B7150FB81E3A9E7600D8D82E /* XADMRAIDParser.swift */,
+				B7150FB91E3A9E7600D8D82E /* XADMRAIDResizeProperties.swift */,
+				B7150FBA1E3A9E7600D8D82E /* XADMRAIDServiceDelegate.swift */,
+				B7150FBB1E3A9E7600D8D82E /* XADMRAIDSettings.swift */,
+				B7150FBC1E3A9E7600D8D82E /* XADMRAIDUtil.swift */,
+			);
+			path = mraid;
+			sourceTree = "<group>";
+		};
+		B7150FBE1E3A9E7600D8D82E /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				B7150FF41E3AAC0500D8D82E /* Reachability.swift */,
+				B7150FC01E3A9E7600D8D82E /* Toast.swift */,
+				B7150FC11E3A9E7600D8D82E /* XADBrowser.swift */,
+				B7150FC21E3A9E7600D8D82E /* XADBrowserControlsView.swift */,
+				B7150FC31E3A9E7600D8D82E /* XADLogger.swift */,
+				B798A3C51E9874B00000C993 /* Constants.swift */,
+				DCC23C181E9867C5009A45D2 /* XADErrorPosting.swift */,
+				DCC23C1A1E98727C009A45D2 /* XADUtils.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		B7150FC41E3A9E7600D8D82E /* vast */ = {
+			isa = PBXGroup;
+			children = (
+				B7150FF61E3AAEBC00D8D82E /* model */,
+				B7150FC51E3A9E7600D8D82E /* IOSVersion.swift */,
+				B7150FC71E3A9E7600D8D82E /* XADVAST2Parser.swift */,
+				B7150FC91E3A9E7600D8D82E /* XADVASTError.swift */,
+				B7150FCA1E3A9E7600D8D82E /* XADVASTEventProcessor.swift */,
+				B7150FCB1E3A9E7600D8D82E /* XADVASTMediaFilePicker.swift */,
+				B7150FCC1E3A9E7600D8D82E /* XADVASTSettings.swift */,
+				B7150FCD1E3A9E7600D8D82E /* XADVASTViewController.swift */,
+				B7150FCE1E3A9E7600D8D82E /* XADVASTXMLUtil.h */,
+				B7150FCF1E3A9E7600D8D82E /* XADVASTXMLUtil.m */,
+			);
+			path = vast;
+			sourceTree = "<group>";
+		};
+		B7150FED1E3AA07800D8D82E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B70A65021EA742C10095135C /* SafariServices.framework */,
+				B70A64FF1EA73F4B0095135C /* WebKit.framework */,
+				B70A64FD1EA73F430095135C /* UIKit.framework */,
+				B70A64FB1EA73F1E0095135C /* CoreLocation.framework */,
+				B7150FF21E3AA12200D8D82E /* libxml2.tbd */,
+				B7150FF01E3AA08000D8D82E /* SystemConfiguration.framework */,
+				B7150FEE1E3AA07800D8D82E /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B7150FF61E3AAEBC00D8D82E /* model */ = {
+			isa = PBXGroup;
+			children = (
+				B7150FF71E3AAEBC00D8D82E /* XADVASTMediaFile.swift */,
+				B7150FF81E3AAEBC00D8D82E /* XADVASTModel.swift */,
+				B7150FF91E3AAEBC00D8D82E /* XADVASTUrlWithId.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		B7A8601D1D6CED2B00060850 = {
+			isa = PBXGroup;
+			children = (
+				B7A860291D6CED2B00060850 /* XADDisplaySdk */,
+				B7A860281D6CED2B00060850 /* Products */,
+				B7150FED1E3AA07800D8D82E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B7A860281D6CED2B00060850 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B7A860271D6CED2B00060850 /* XADDisplaySdk.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B7A860291D6CED2B00060850 /* XADDisplaySdk */ = {
+			isa = PBXGroup;
+			children = (
+				B7D4E56E1E93358C005EFA1C /* Resources */,
+				B7150FB21E3A9E7600D8D82E /* mraid */,
+				B7150FBE1E3A9E7600D8D82E /* utils */,
+				B7150FC41E3A9E7600D8D82E /* vast */,
+				B7A8602A1D6CED2B00060850 /* XADDisplaySdk.h */,
+				B78AE3A71D6D052400AB090E /* XADDisplaySdk.swift */,
+				B73474D11D7F86630067098C /* XADBannerView.swift */,
+				B7310CF31DA31BBB008CF7E1 /* XADInterstitial.swift */,
+				B7E477801E302D7F0035D3D3 /* XADVideoAd.swift */,
+				B73474D61D7F87F70067098C /* XADBannerDelegate.swift */,
+				B7310CF51DA5ABAD008CF7E1 /* XADInterstitialDelegate.swift */,
+				B7E477821E302E3B0035D3D3 /* XADVideoAdDelegate.swift */,
+				B73474D81D7F8B980067098C /* XADBannerSize.swift */,
+				B73474CF1D7F84AB0067098C /* XADErrorCode.swift */,
+				B734749D1D6D3A780067098C /* XADRequest.swift */,
+				B73474DA1D7FA6530067098C /* XADMRAIDServiceProvider.swift */,
+				B710B15F1E1C86D10058ACF3 /* XADLocationManager.swift */,
+				B710B1641E1C8D760058ACF3 /* XADNetworkManager.swift */,
+				B76F44031E1CAB0A003A40A8 /* XADURLGenerator.swift */,
+				B7196D161E89A68000E038EF /* XADDisplayTestDelegate.swift */,
+				B798A3C91E9C96B10000C993 /* UIViewExt.swift */,
+				B7A8602C1D6CED2B00060850 /* Info.plist */,
+			);
+			path = XADDisplaySdk;
+			sourceTree = "<group>";
+		};
+		B7D4E56E1E93358C005EFA1C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B7D4E56F1E93358C005EFA1C /* CloseButton.png */,
+				B7D4E5701E93358C005EFA1C /* CloseButton@2x.png */,
+				B7D4E5711E93358C005EFA1C /* CloseButton@3x.png */,
+				B7D4E5721E93358C005EFA1C /* infoButton.png */,
+				B7D4E5731E93358C005EFA1C /* infoButton@2x.png */,
+				B7D4E5741E93358C005EFA1C /* infoButton@3x.png */,
+				B7D4E5751E93358C005EFA1C /* mraid.js */,
+				B7D4E5761E93358C005EFA1C /* vast_schema.xsd */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B7A860241D6CED2B00060850 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7150FE91E3A9E7600D8D82E /* XADVASTXMLUtil.h in Headers */,
+				B7A8602B1D6CED2B00060850 /* XADDisplaySdk.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B7A860261D6CED2B00060850 /* XADDisplaySdk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7A8603B1D6CED2B00060850 /* Build configuration list for PBXNativeTarget "XADDisplaySdk" */;
+			buildPhases = (
+				B7A860221D6CED2B00060850 /* Sources */,
+				B7A860231D6CED2B00060850 /* Frameworks */,
+				B7A860241D6CED2B00060850 /* Headers */,
+				B7A860251D6CED2B00060850 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XADDisplaySdk;
+			productName = XADDisplaySdk;
+			productReference = B7A860271D6CED2B00060850 /* XADDisplaySdk.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B7A8601E1D6CED2B00060850 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Xad;
+				TargetAttributes = {
+					B7A860261D6CED2B00060850 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 7S36YSK9RV;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = B7A860211D6CED2B00060850 /* Build configuration list for PBXProject "XADDisplaySdk" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B7A8601D1D6CED2B00060850;
+			productRefGroup = B7A860281D6CED2B00060850 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B7A860261D6CED2B00060850 /* XADDisplaySdk */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B7A860251D6CED2B00060850 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7D4E57B1E93358C005EFA1C /* infoButton@2x.png in Resources */,
+				B7D4E5791E93358C005EFA1C /* CloseButton@3x.png in Resources */,
+				B7D4E57E1E93358C005EFA1C /* vast_schema.xsd in Resources */,
+				B7D4E57A1E93358C005EFA1C /* infoButton.png in Resources */,
+				B7D4E57D1E93358C005EFA1C /* mraid.js in Resources */,
+				B7D4E5771E93358C005EFA1C /* CloseButton.png in Resources */,
+				B7D4E5781E93358C005EFA1C /* CloseButton@2x.png in Resources */,
+				B7D4E57C1E93358C005EFA1C /* infoButton@3x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B7A860221D6CED2B00060850 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7150FD41E3A9E7600D8D82E /* XADMRAIDOrientationProperties.swift in Sources */,
+				B7150FE21E3A9E7600D8D82E /* XADVAST2Parser.swift in Sources */,
+				B7150FE41E3A9E7600D8D82E /* XADVASTError.swift in Sources */,
+				B7150FD51E3A9E7600D8D82E /* XADMRAIDParser.swift in Sources */,
+				B7150FD91E3A9E7600D8D82E /* XADMRAIDUtil.swift in Sources */,
+				B7150FDD1E3A9E7600D8D82E /* XADBrowser.swift in Sources */,
+				B7150FD31E3A9E7600D8D82E /* XADMRAIDModalViewController.swift in Sources */,
+				B7150FFC1E3AAEBC00D8D82E /* XADVASTUrlWithId.swift in Sources */,
+				B7310CF61DA5ABAD008CF7E1 /* XADInterstitialDelegate.swift in Sources */,
+				B798A3C61E9874B00000C993 /* Constants.swift in Sources */,
+				B7150FE81E3A9E7600D8D82E /* XADVASTViewController.swift in Sources */,
+				B73474D91D7F8B980067098C /* XADBannerSize.swift in Sources */,
+				B7150FDF1E3A9E7600D8D82E /* XADLogger.swift in Sources */,
+				B7310CF41DA31BBB008CF7E1 /* XADInterstitial.swift in Sources */,
+				B73474D21D7F86630067098C /* XADBannerView.swift in Sources */,
+				B7150FF51E3AAC0500D8D82E /* Reachability.swift in Sources */,
+				B7150FDC1E3A9E7600D8D82E /* Toast.swift in Sources */,
+				B710B1651E1C8D760058ACF3 /* XADNetworkManager.swift in Sources */,
+				B7150FEA1E3A9E7600D8D82E /* XADVASTXMLUtil.m in Sources */,
+				B7E477811E302D7F0035D3D3 /* XADVideoAd.swift in Sources */,
+				B78AE3A81D6D052400AB090E /* XADDisplaySdk.swift in Sources */,
+				B7150FE71E3A9E7600D8D82E /* XADVASTSettings.swift in Sources */,
+				B734749E1D6D3A780067098C /* XADRequest.swift in Sources */,
+				B7150FE51E3A9E7600D8D82E /* XADVASTEventProcessor.swift in Sources */,
+				B7150FFA1E3AAEBC00D8D82E /* XADVASTMediaFile.swift in Sources */,
+				B798A3CA1E9C96B10000C993 /* UIViewExt.swift in Sources */,
+				B76F44041E1CAB0A003A40A8 /* XADURLGenerator.swift in Sources */,
+				DCC23C191E9867C5009A45D2 /* XADErrorPosting.swift in Sources */,
+				B73474D01D7F84AB0067098C /* XADErrorCode.swift in Sources */,
+				B73474D71D7F87F70067098C /* XADBannerDelegate.swift in Sources */,
+				B7E477831E302E3B0035D3D3 /* XADVideoAdDelegate.swift in Sources */,
+				B7196D171E89A68000E038EF /* XADDisplayTestDelegate.swift in Sources */,
+				B7150FD71E3A9E7600D8D82E /* XADMRAIDServiceDelegate.swift in Sources */,
+				B7150FD81E3A9E7600D8D82E /* XADMRAIDSettings.swift in Sources */,
+				B7150FDA1E3A9E7600D8D82E /* XADMRAIDView.swift in Sources */,
+				B710B1601E1C86D10058ACF3 /* XADLocationManager.swift in Sources */,
+				B7150FFB1E3AAEBC00D8D82E /* XADVASTModel.swift in Sources */,
+				B7150FE01E3A9E7600D8D82E /* IOSVersion.swift in Sources */,
+				DCC23C1B1E98727C009A45D2 /* XADUtils.swift in Sources */,
+				B7150FDE1E3A9E7600D8D82E /* XADBrowserControlsView.swift in Sources */,
+				B7150FD61E3A9E7600D8D82E /* XADMRAIDResizeProperties.swift in Sources */,
+				B73474DB1D7FA6530067098C /* XADMRAIDServiceProvider.swift in Sources */,
+				B7150FE61E3A9E7600D8D82E /* XADVASTMediaFilePicker.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B7A860391D6CED2B00060850 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B7A8603A1D6CED2B00060850 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B7A8603C1D6CED2B00060850 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7S36YSK9RV;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				INFOPLIST_FILE = XADDisplaySdk/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xad.XADDisplaySdk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B7A8603D1D6CED2B00060850 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7S36YSK9RV;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				INFOPLIST_FILE = XADDisplaySdk/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xad.XADDisplaySdk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B7A860211D6CED2B00060850 /* Build configuration list for PBXProject "XADDisplaySdk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7A860391D6CED2B00060850 /* Debug */,
+				B7A8603A1D6CED2B00060850 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7A8603B1D6CED2B00060850 /* Build configuration list for PBXNativeTarget "XADDisplaySdk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7A8603C1D6CED2B00060850 /* Debug */,
+				B7A8603D1D6CED2B00060850 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B7A8601E1D6CED2B00060850 /* Project object */;
+}

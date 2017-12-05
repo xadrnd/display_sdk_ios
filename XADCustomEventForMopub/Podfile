@@ -1,0 +1,7 @@
+target 'XADCustomEventForMopub' do
+	use_frameworks!
+	project 'XADCustomEventForMopub.xcodeproj'
+
+	pod 'mopub-ios-sdk', '~> 4.18'
+	pod 'GroundTruthDisplaySDK', '~> 1.1.7'
+end

@@ -1,0 +1,21 @@
+#workspace
+xcuserdata/
+*.xcbkptlist
+*.xcuserstate
+*.xcsettings
+/**/IDEFindNavigatorScopes.plist
+#project file
+*.xcscheme
+/**/xcschememanagement.plist
+XADDisplaySDK/build/
+.idea
+.DS_STORE
+XADDisplaySdk/XADDisplaySdk.framework/
+XADCustomEventForGoogleMobileAd/XADCustomEventForGoogleMobileAd.framework/
+XADCustomEventForMopub/XADCustomEventForMopub.framework/
+LICENSE.html
+README.html
+/**/Pods/
+*.framework.zip
+Pods/
+docs/
