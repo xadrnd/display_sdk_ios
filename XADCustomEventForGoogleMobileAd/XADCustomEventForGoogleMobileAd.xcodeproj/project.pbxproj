@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8D499B84D9DD92DBE89EE480 /* Pods_XADCustomEventForGoogleMobileAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78DC20B1A3AAB8D37CF291DF /* Pods_XADCustomEventForGoogleMobileAd.framework */; };
+		37ED40C8519DBF44CEA81698 /* Pods_XADCustomEventForGoogleMobileAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 306FD060254B186E98CD8259 /* Pods_XADCustomEventForGoogleMobileAd.framework */; };
 		B72C45451E4509AA00317155 /* XADCustomEventInterstitialForAdmob.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72C45441E4509AA00317155 /* XADCustomEventInterstitialForAdmob.swift */; };
 		B72C45491E4509BD00317155 /* XADCustomEventInterstitialForDFP.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72C45481E4509BD00317155 /* XADCustomEventInterstitialForDFP.swift */; };
 		B7C58A891E3ACFDF00AE0090 /* XADCustomEventForGoogleMobileAd.h in Headers */ = {isa = PBXBuildFile; fileRef = B7C58A871E3ACFDF00AE0090 /* XADCustomEventForGoogleMobileAd.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -16,8 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		306FD060254B186E98CD8259 /* Pods_XADCustomEventForGoogleMobileAd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XADCustomEventForGoogleMobileAd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		332D07EDF2441D5531084831 /* Pods-XADCustomEventForGoogleMobileAd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XADCustomEventForGoogleMobileAd.release.xcconfig"; path = "Pods/Target Support Files/Pods-XADCustomEventForGoogleMobileAd/Pods-XADCustomEventForGoogleMobileAd.release.xcconfig"; sourceTree = "<group>"; };
-		78DC20B1A3AAB8D37CF291DF /* Pods_XADCustomEventForGoogleMobileAd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XADCustomEventForGoogleMobileAd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4ED3B6CA36D9F2D34F38F80 /* Pods-XADCustomEventForGoogleMobileAd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XADCustomEventForGoogleMobileAd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XADCustomEventForGoogleMobileAd/Pods-XADCustomEventForGoogleMobileAd.debug.xcconfig"; sourceTree = "<group>"; };
 		B72C45441E4509AA00317155 /* XADCustomEventInterstitialForAdmob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XADCustomEventInterstitialForAdmob.swift; sourceTree = "<group>"; };
 		B72C45481E4509BD00317155 /* XADCustomEventInterstitialForDFP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XADCustomEventInterstitialForDFP.swift; sourceTree = "<group>"; };
@@ -33,7 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D499B84D9DD92DBE89EE480 /* Pods_XADCustomEventForGoogleMobileAd.framework in Frameworks */,
+				37ED40C8519DBF44CEA81698 /* Pods_XADCustomEventForGoogleMobileAd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +52,7 @@
 		B70A64EF1EA6C50B0095135C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				78DC20B1A3AAB8D37CF291DF /* Pods_XADCustomEventForGoogleMobileAd.framework */,
+				306FD060254B186E98CD8259 /* Pods_XADCustomEventForGoogleMobileAd.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -133,9 +133,8 @@
 				TargetAttributes = {
 					B7C58A831E3ACFDF00AE0090 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 7S36YSK9RV;
 						LastSwiftMigration = 0820;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -333,8 +332,9 @@
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 7S36YSK9RV;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -347,6 +347,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xad.display.customevent.XADCustomEventForGoogleMobileAd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -361,8 +362,9 @@
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 7S36YSK9RV;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -375,6 +377,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xad.display.customevent.XADCustomEventForGoogleMobileAd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = NO;
 				SWIFT_VERSION = 3.0;
 				VALID_ARCHS = "arm64 armv7 armv7s x86 x64";

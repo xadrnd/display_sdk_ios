@@ -5,14 +5,15 @@
       s.summary      = "GroundTruth Display SDK iOS"
       s.homepage     = "https://docs.groundtruth.com"
       s.documentation_url = "https://docs.groundtruth.com"
-      s.license      = { :type => "BSD", :file => "LICENSE" }
+      s.license      = { :type => "BSD", :file => "LICENSE.md" }
       s.author       = { "GroundTruth" => "sdk@groundtruth.com" }
       s.platform     = :ios
       s.ios.deployment_target = '8.0'
       s.source = {
-        :git => 'git://github.com/xadrnd/display_sdk_ios.git', :tag => 'v1.1.8' 
+        :git => 'https://github.com/xadrnd/display_sdk_ios.git', :tag => 'v1.1.8' 
       }
-      s.source_files = 'XADDisplaySdk/*'
+      s.source_files = 'XADDisplaySdk/XADDisplaySdk/**/*.swift'
+      s.resources = 'XADDisplaySdk/XADDisplaySdk/**/Resources/*.{png,js,xsd}'
       
         s.frameworks = 'SafariServices', 'WebKit', 'UIKit', 'CoreLocation', 'SystemConfiguration', 'Foundation'
         s.libraries = 'xml2'

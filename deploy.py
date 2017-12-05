@@ -77,14 +77,15 @@ if __name__ == "__main__":
       s.summary      = "%s"
       s.homepage     = "https://docs.groundtruth.com"
       s.documentation_url = "https://docs.groundtruth.com"
-      s.license      = { :type => "%s", :file => "LICENSE" }
+      s.license      = { :type => "%s", :file => "LICENSE.md" }
       s.author       = { "GroundTruth" => "sdk@groundtruth.com" }
       s.platform     = :ios
       s.ios.deployment_target = '8.0'
       s.source = {
-        :git => 'git://github.com/xadrnd/display_sdk_ios.git', :tag => 'v%s' 
+        :git => 'https://github.com/xadrnd/display_sdk_ios.git', :tag => 'v%s' 
       }
-      s.source_files = '%s/*'
+      s.source_files = '%s/%s/**/*.swift'
+      s.resources = '%s/%s/**/Resources/*.{png,js,xsd}'
       %s
     end
     """ % (
@@ -93,6 +94,9 @@ if __name__ == "__main__":
         summary,
         license,
         version,
+        framework,
+        framework,
+        framework,
         framework,
         deps
     )
