@@ -1,8 +1,8 @@
 
     Pod::Spec.new do |s|
-      s.name         = "GroundTruthDisplaySDK"
+      s.name         = ""
       s.version      = "1.1.8"
-      s.summary      = "GroundTruth Display SDK iOS"
+      s.summary      = ""
       s.homepage     = "https://docs.groundtruth.com"
       s.documentation_url = "https://docs.groundtruth.com"
       s.license      = { :type => "BSD", :file => "LICENSE" }
@@ -12,10 +12,7 @@
       s.source = {
         :git => 'git://github.com/xadrnd/display_sdk_ios.git', :tag => 'v1.1.8' 
       }
-      s.source_files = 'XADDisplaySdk/*'
+      s.source_files = 'XADDisplaySDK/*'
       
-        s.frameworks = 'SafariServices', 'WebKit', 'UIKit', 'CoreLocation', 'SystemConfiguration', 'Foundation'
-        s.libraries = 'xml2'
-        
     end
     

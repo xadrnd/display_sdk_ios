@@ -1,10 +1,7 @@
 import re
 import sys
 import shutil
-from boto.s3.connection import S3Connection
-from boto.s3.key import Key
 import subprocess
-from boto.cloudfront import CloudFrontConnection
 
 # TODO Get version from plist
 
@@ -36,7 +33,6 @@ if __name__ == "__main__":
     if framework == "XADDisplaySdk":
         name = "GroundTruthDisplaySDK"
         summary = "GroundTruth Display SDK iOS"
-        download_folder = "display"
         deps = """
         s.frameworks = 'SafariServices', 'WebKit', 'UIKit', 'CoreLocation', 'SystemConfiguration', 'Foundation'
         s.libraries = 'xml2'
@@ -44,7 +40,6 @@ if __name__ == "__main__":
     elif framework == "XADCustomEventForGoogleMobileAd":
         name = "GroundTruthCustomEventForGoogleMobileAd"
         summary = "GroundTruth Display SDK iOS Custom Event for Google Mobile Ad"
-        download_folder = "customeventgooglemobilead"
         deps = """
         s.dependency 'Google-Mobile-Ads-SDK', '~> 7.26'
         s.dependency 'GroundTruthDisplaySDK'
@@ -53,17 +48,16 @@ if __name__ == "__main__":
     elif framework == "XADCustomEventForMopub":
         name = "GroundTruthCustomEventForMopub"
         summary = "GroundTruth Display SDK iOS Custom Event for Mopub"
-        download_folder = "customeventmopub"
         deps = """
         s.dependency 'mopub-ios-sdk', '~> 4.18'
         s.dependency 'GroundTruthDisplaySDK'
         s.frameworks = 'AdSupport', 'SafariServices'
         """
+    else:
+        print("No framework named: %s" % framework)
+        sys.exit(1)
 
     podspec_filename = "%s/%s.podspec" % (framework, name)
-
-    s3_conn = S3Connection()
-    bucket = s3_conn.get_bucket("xad-cdn")
 
     # Pod update
     try:
@@ -74,61 +68,6 @@ if __name__ == "__main__":
         ], stderr=subprocess.STDOUT))
     except:
         pass
-
-    if framework != "XADDisplaySdk":
-        # Build archive
-        subprocess.check_output(
-            [
-                "xcodebuild",
-                "-workspace",
-                "{framework}/{framework}.xcworkspace".format(framework=framework),
-                "-scheme",
-                framework,
-                "archive"
-            ],
-            stderr=subprocess.STDOUT
-        )
-    else:
-        subprocess.check_output(
-            [
-                "xcodebuild",
-                "-project",
-                "{framework}/{framework}.xcodeproj".format(framework=framework),
-                "-scheme",
-                framework,
-                "archive"
-            ],
-            stderr=subprocess.STDOUT
-        )
-
-    print("Framework built")
-
-    # Zip framework
-    shutil.make_archive(
-        "{framework}/{framework}.framework".format(framework=framework),
-        "zip",
-        "{framework}/".format(framework=framework),
-        "{framework}.framework".format(framework=framework)
-    )
-
-    print("Framework zipped")
-
-    target_location = "sdk/downloads/%s/ios/%s/%s.framework.zip" % (download_folder, version, framework)
-
-    # Upload to cloudfront
-    key = bucket.get_key(target_location)
-    if not key:
-        key = Key(bucket)
-        key.key = target_location
-
-    key.set_contents_from_filename("{framework}/{framework}.framework.zip".format(framework=framework))
-
-    print("Framework uploaded to CloudFront")
-
-    cf_conn = CloudFrontConnection(AWS_KEY, AWS_SECRET)
-    cf_conn.create_invalidation_request("E1W31HOTQX0RGC", "/sdk*")
-
-    print("CloudFront invalidation requested")
 
     # Edit podspec file
     podspec = """
@@ -143,9 +82,9 @@ if __name__ == "__main__":
       s.platform     = :ios
       s.ios.deployment_target = '8.0'
       s.source = {
-        :http => 'https://cf.xad.com/%s'
+        :git => 'git://github.com/xadrnd/display_sdk_ios.git', :tag => 'v%s' 
       }
-      s.vendored_frameworks = '%s.framework'
+      s.source_files = '%s/*'
       %s
     end
     """ % (
@@ -153,7 +92,7 @@ if __name__ == "__main__":
         version,
         summary,
         license,
-        target_location,
+        version,
         framework,
         deps
     )
