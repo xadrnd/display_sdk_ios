@@ -10,7 +10,6 @@
 #import <libxml/tree.h>
 #import <libxml/xpath.h>
 #include <libxml/xmlschemastypes.h>
-#import <XADDisplaySdk/XADDisplaySdk-Swift.h>
 
 #define LIBXML_SCHEMAS_ENABLED
 
@@ -26,7 +25,7 @@ void documentParserErrorCallback(void *ctx, const char *msg, ...)
         errMsg = [[NSString stringWithCString:s encoding:NSUTF8StringEncoding] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     }
     if ([errMsg length] > 0) {
-        [XADLogger error:@"VAST - XML Util" message:[NSString stringWithFormat:@"Document parser error: %@", errMsg]];
+        //[XADLogger error:@"VAST - XML Util" message:[NSString stringWithFormat:@"Document parser error: %@", errMsg]];
     }
     va_end(args);
 }
@@ -38,7 +37,7 @@ void schemaParserErrorCallback(void *ctx, const char *msg, ...)
     char *s = va_arg(args, char*);
     NSString *errMsg = [[NSString stringWithCString:s encoding:NSUTF8StringEncoding] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     if ([errMsg length] > 0) {
-        [XADLogger error:@"VAST - XML Util" message:[NSString stringWithFormat:@"Schema parser error: %@", errMsg]];
+        //[XADLogger error:@"VAST - XML Util" message:[NSString stringWithFormat:@"Schema parser error: %@", errMsg]];
     }
     va_end(args);
 }
@@ -50,7 +49,7 @@ void schemaParserWarningCallback(void *ctx, const char *msg, ...)
     char *s = va_arg(args, char*);
     NSString *errMsg = [[NSString stringWithCString:s encoding:NSUTF8StringEncoding] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     if ([errMsg length] > 0) {
-        [XADLogger warning:@"VAST - XML Util" message:[NSString stringWithFormat:@"Schema parser warning: %@", errMsg]];
+        //[XADLogger warning:@"VAST - XML Util" message:[NSString stringWithFormat:@"Schema parser warning: %@", errMsg]];
     }
     va_end(args);
 }
@@ -62,7 +61,7 @@ void schemaValidationErrorCallback(void *ctx, const char *msg, ...)
     char *s = va_arg(args, char*);
     NSString *errMsg = [[NSString stringWithCString:s encoding:NSUTF8StringEncoding] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     if ([errMsg length] > 0) {
-        [XADLogger error:@"VAST - XML Util" message:[NSString stringWithFormat:@"Schema validation error: %@", errMsg]];
+        //[XADLogger error:@"VAST - XML Util" message:[NSString stringWithFormat:@"Schema validation error: %@", errMsg]];
     }
     va_end(args);
 }
@@ -74,7 +73,7 @@ void schemaValidationWarningCallback(void *ctx, const char *msg, ...)
     char *s = va_arg(args, char*);
     NSString *errMsg = [[NSString stringWithCString:s encoding:NSUTF8StringEncoding] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     if ([errMsg length] > 0) {
-        [XADLogger warning:@"VAST - XML Util" message:[NSString stringWithFormat:@"Schema validation warning: %@", errMsg]];
+        //[XADLogger warning:@"VAST - XML Util" message:[NSString stringWithFormat:@"Schema validation warning: %@", errMsg]];
     }
     va_end(args);
 }
@@ -166,20 +165,20 @@ NSArray *performXPathQuery(xmlDocPtr doc, NSString *query)
     // Create xpath evaluation context
     xpathCtx = xmlXPathNewContext(doc);
     if (xpathCtx == NULL) {
-        [XADLogger error:@"VAST - XML Util" message:@"Unable to create XPath context."];
+        //[XADLogger error:@"VAST - XML Util" message:@"Unable to create XPath context."];
         return nil;
     }
     
     // Evaluate xpath expression
     xpathObj = xmlXPathEvalExpression((xmlChar *)[query cStringUsingEncoding:NSUTF8StringEncoding], xpathCtx);
     if (xpathObj == NULL) {
-        [XADLogger error:@"VAST - XML Util" message:@"Unable to evaluate XPath."];
+        //[XADLogger error:@"VAST - XML Util" message:@"Unable to evaluate XPath."];
         return nil;
     }
     
     xmlNodeSetPtr nodes = xpathObj->nodesetval;
     if (!nodes) {
-        [XADLogger debug:@"VAST - XML Util" message:@"Nodes was nil."];
+        //[XADLogger debug:@"VAST - XML Util" message:@"Nodes was nil."];
         return nil;
     }
     
@@ -208,7 +207,7 @@ NSArray *performXPathQuery(xmlDocPtr doc, NSString *query)
     xmlSetGenericErrorFunc(NULL, (xmlGenericErrorFunc)documentParserErrorCallback);
     xmlDocPtr doc = xmlReadMemory([document bytes], (int)[document length], "", NULL, 0); // XML_PARSE_RECOVER
     if (doc == NULL) {
-        [XADLogger error:@"VAST - XML Util" message:@"Unable to parse."];
+        //[XADLogger error:@"VAST - XML Util" message:@"Unable to parse."];
         retval = NO;
     } else {
         xmlFreeDoc(doc);
@@ -224,7 +223,7 @@ NSArray *performXPathQuery(xmlDocPtr doc, NSString *query)
     // load XML document
     xmlDocPtr doc = xmlReadMemory([document bytes], (int)[document length], "", NULL, 0); // XML_PARSE_RECOVER
     if (doc == NULL) {
-        [XADLogger error:@"VAST - XML Util" message:@"Unable to parse."];
+        //[XADLogger error:@"VAST - XML Util" message:@"Unable to parse."];
         xmlCleanupParser();
         return NO;
     }
@@ -250,11 +249,11 @@ NSArray *performXPathQuery(xmlDocPtr doc, NSString *query)
                             NULL);
     int ret = xmlSchemaValidateDoc(validCtxt, doc);
     if (ret == 0) {
-        [XADLogger debug:@"VAST - XML Util" message:@"document is valid"];
+        //[XADLogger debug:@"VAST - XML Util" message:@"document is valid"];
     } else if (ret > 0) {
-        [XADLogger warning:@"VAST - XML Util" message:@"document is invalid"];
+        //[XADLogger warning:@"VAST - XML Util" message:@"document is invalid"];
     } else {
-        [XADLogger error:@"VAST - XML Util" message:@"validation generated an internal error"];
+        //[XADLogger error:@"VAST - XML Util" message:@"validation generated an internal error"];
     }
     
     xmlSchemaFreeValidCtxt(validCtxt);
@@ -277,7 +276,7 @@ NSArray *performXPathQuery(xmlDocPtr doc, NSString *query)
     xmlDocPtr doc;
     doc = xmlReadMemory([document bytes], (int)[document length], "", NULL, 0); // XML_PARSE_RECOVER);
     if (doc == NULL) {
-        [XADLogger error:@"VAST - XML Util" message:@"Unable to parse."];
+        //[XADLogger error:@"VAST - XML Util" message:@"Unable to parse."];
         return nil;
     }
     NSArray *result = performXPathQuery(doc, query);
