@@ -10,7 +10,6 @@
 #import <libxml/tree.h>
 #import <libxml/xpath.h>
 #include <libxml/xmlschemastypes.h>
-#import <XADDisplaySdk/XADDisplaySdk-Swift.h>
 
 #define LIBXML_SCHEMAS_ENABLED
 
