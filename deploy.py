@@ -34,7 +34,7 @@ if __name__ == "__main__":
         name = "GroundTruthDisplaySDK"
         summary = "GroundTruth Display SDK iOS"
         deps = """
-        s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2'. 'SWIFT_OBJC_BRIDGING_HEADER' => '$(SWIFT_MODULE_NAME)-Swift.h' }
+        s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
         s.frameworks = 'SafariServices', 'WebKit', 'UIKit', 'CoreLocation', 'SystemConfiguration', 'Foundation'
         s.libraries = 'xml2'
         """
