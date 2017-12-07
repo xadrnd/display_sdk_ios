@@ -7,11 +7,4 @@
 //
 
 #import <UIKit/UIKit.h>
-
-//! Project version number for XADDisplaySdk.
-FOUNDATION_EXPORT double XADDisplaySdkVersionNumber;
-
-//! Project version string for XADDisplaySdk.  BUG no string
-FOUNDATION_EXPORT const unsigned char XADDisplaySdkVersionString[];
-
 #import "XADVASTXMLUtil.h"

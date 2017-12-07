@@ -12,6 +12,7 @@
       s.source = {
         :git => 'https://github.com/xadrnd/display_sdk_ios.git', :branch => "MOB-360"
       }
+      s.requires_arc = true
       s.source_files = 'XADDisplaySdk/XADDisplaySdk/**/*.{h,m,swift}'
       s.resources = 'XADDisplaySdk/XADDisplaySdk/**/Resources/*.{png,js,xsd}'
       s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }

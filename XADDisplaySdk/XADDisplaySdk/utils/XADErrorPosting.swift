@@ -28,7 +28,7 @@ func sendError(errorCode: PostedError, payload: String, adGroupId: String) {
     let json: [String: Any] = [
         "app": XADUtils.appname() ?? "unknown",
         "appv": XADUtils.appver() ?? "unknown",
-        "sdkv": String(XADDisplaySdkVersionNumber),
+        "sdkv": String(describing: XADUtils.sdkVersion()),
         "os": "ios",
         "err": errorCode.rawValue,
         "pay": payload,
