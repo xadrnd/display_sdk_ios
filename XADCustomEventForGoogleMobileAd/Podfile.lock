@@ -1,15 +1,15 @@
 PODS:
   - Google-Mobile-Ads-SDK (7.26.0)
-  - GroundTruthDisplaySDK (1.1.8)
+  - GroundTruthDisplaySDK (1.1.9)
 
 DEPENDENCIES:
   - Google-Mobile-Ads-SDK (~> 7.23)
-  - GroundTruthDisplaySDK (~> 1.1.8)
+  - GroundTruthDisplaySDK (~> 1.1.9)
 
 SPEC CHECKSUMS:
   Google-Mobile-Ads-SDK: 22d4a6fe18d526adcc12a86d8cc2d53872700966
-  GroundTruthDisplaySDK: f85a002030524d7c99b9860746d8c69c2a7ed446
+  GroundTruthDisplaySDK: 621173f042fd0f5d7825ebe8fd566827ee63853a
 
-PODFILE CHECKSUM: 99dc7289dfe3905b7c3734706b1016b759e9d604
+PODFILE CHECKSUM: 6a119275c577e4466392454108e26d92720b9c60
 
 COCOAPODS: 1.3.1

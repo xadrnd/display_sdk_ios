@@ -3,5 +3,13 @@ target 'XADCustomEventForGoogleMobileAd' do
 	project 'XADCustomEventForGoogleMobileAd.xcodeproj'
 
 	pod 'Google-Mobile-Ads-SDK', '~> 7.23'
-	pod 'GroundTruthDisplaySDK', '~> 1.1.8'
+	pod 'GroundTruthDisplaySDK', '~> 1.1.9'
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |configuration|
+      target.build_settings(configuration.name)['CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES'] = 'YES'
+    end
+  end
 end

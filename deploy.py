@@ -37,7 +37,8 @@ if __name__ == "__main__":
         s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
         s.frameworks = 'SafariServices', 'WebKit', 'UIKit', 'CoreLocation', 'SystemConfiguration', 'Foundation'
         s.libraries = 'xml2'
-        """
+        s.resources = '%s/%s/**/Resources/*.{png,js,xsd}'
+        """ % (framework, framework)
     elif framework == "XADCustomEventForGoogleMobileAd":
         name = "GroundTruthCustomEventForGoogleMobileAd"
         summary = "GroundTruth Display SDK iOS Custom Event for Google Mobile Ad"
@@ -86,7 +87,6 @@ if __name__ == "__main__":
         :git => 'https://github.com/xadrnd/display_sdk_ios.git', :tag => 'v%s' 
       }
       s.source_files = '%s/%s/**/*.{h,m,swift}'
-      s.resources = '%s/%s/**/Resources/*.{png,js,xsd}'
       %s
     end
     """ % (
@@ -95,8 +95,6 @@ if __name__ == "__main__":
         summary,
         license,
         version,
-        framework,
-        framework,
         framework,
         framework,
         deps
