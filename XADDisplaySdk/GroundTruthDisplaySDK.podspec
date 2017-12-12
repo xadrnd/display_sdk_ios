@@ -13,11 +13,11 @@
         :git => 'https://github.com/xadrnd/display_sdk_ios.git', :tag => 'v1.1.9' 
       }
       s.source_files = 'XADDisplaySdk/XADDisplaySdk/**/*.{h,m,swift}'
-      s.resources = 'XADDisplaySdk/XADDisplaySdk/**/Resources/*.{png,js,xsd}'
       
         s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
         s.frameworks = 'SafariServices', 'WebKit', 'UIKit', 'CoreLocation', 'SystemConfiguration', 'Foundation'
         s.libraries = 'xml2'
+        s.resources = 'XADDisplaySdk/**/**/Resources/*.{png,js,xsd}'
         
     end
     

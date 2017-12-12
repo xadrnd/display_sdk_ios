@@ -37,8 +37,8 @@ if __name__ == "__main__":
         s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
         s.frameworks = 'SafariServices', 'WebKit', 'UIKit', 'CoreLocation', 'SystemConfiguration', 'Foundation'
         s.libraries = 'xml2'
-        s.resources = '%s/%s/**/Resources/*.{png,js,xsd}'
-        """ % (framework, framework)
+        s.resources = '%s/**/**/Resources/*.{png,js,xsd}'
+        """ % framework
     elif framework == "XADCustomEventForGoogleMobileAd":
         name = "GroundTruthCustomEventForGoogleMobileAd"
         summary = "GroundTruth Display SDK iOS Custom Event for Google Mobile Ad"

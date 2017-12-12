@@ -17,6 +17,7 @@ FOUNDATION_EXPORT const unsigned char XADCustomEventForMopubVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <XADCustomEventForMopub/PublicHeader.h>
 
 
+#import "GroundTruthDisplaySDK/XADDisplaySdk.h"
 
 #import "MoPub/MoPub.h"
 

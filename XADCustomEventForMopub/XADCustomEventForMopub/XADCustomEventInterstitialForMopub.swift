@@ -5,7 +5,6 @@
 //  Created by Ray Wu on 2/3/17.
 //  Copyright © 2017 Xad. All rights reserved.
 //
-import XADDisplaySdk
 
 open class XADCustomEventInterstitialForMopub: MPInterstitialCustomEvent {
     //weak open var delegate: MPInterstitialCustomEventDelegate!
