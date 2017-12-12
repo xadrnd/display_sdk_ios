@@ -18,3 +18,4 @@ README.html
 /**/Pods/
 *.framework.zip
 Pods/
+XADCustomEvent*.xcworkspace/

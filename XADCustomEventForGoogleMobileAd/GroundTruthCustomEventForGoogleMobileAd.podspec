@@ -10,7 +10,7 @@
       s.platform     = :ios
       s.ios.deployment_target = '9.0'
       s.source = {
-        :git => 'https://github.com/xadrnd/display_sdk_ios.git', :tag => 'v1.1.9' 
+        :git => 'https://github.com/xadrnd/display_sdk_ios.git'
       }
       s.source_files = 'XADCustomEventForGoogleMobileAd/XADCustomEventForGoogleMobileAd/**/*.{h,m,swift}'
       

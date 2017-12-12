@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GroundTruthDisplaySDK/XADDisplaySdk.h"
 
 //! Project version number for XADCustomEventForGoogleMobileAd.
 FOUNDATION_EXPORT double XADCustomEventForGoogleMobileAdVersionNumber;

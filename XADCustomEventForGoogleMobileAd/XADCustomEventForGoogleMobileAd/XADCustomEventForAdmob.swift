@@ -5,7 +5,6 @@
 //  Copyright © 2016 Google. All rights reserved.
 //
 import GoogleMobileAds
-import XADDisplaySdk
 
 fileprivate let TAG = "XADCustomEventBannerForAdmob"
 

@@ -6,7 +6,6 @@
 //  Copyright © 2017 Xad. All rights reserved.
 //
 import GoogleMobileAds
-import XADDisplaySdk
 
 fileprivate let TAG = "XADCustomEventInterstitialForAdmob"
 
