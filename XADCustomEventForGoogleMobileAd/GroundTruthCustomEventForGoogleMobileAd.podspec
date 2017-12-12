@@ -1,7 +1,7 @@
 
     Pod::Spec.new do |s|
       s.name         = "GroundTruthCustomEventForGoogleMobileAd"
-      s.version      = "1.1.9"
+      s.version      = "1.1.10"
       s.summary      = "GroundTruth Display SDK iOS Custom Event for Google Mobile Ad"
       s.homepage     = "https://docs.groundtruth.com"
       s.documentation_url = "https://docs.groundtruth.com"
@@ -14,9 +14,18 @@
       }
       s.source_files = 'XADCustomEventForGoogleMobileAd/XADCustomEventForGoogleMobileAd/**/*.{h,m,swift}'
       
-        s.dependency 'Google-Mobile-Ads-SDK', '~> 7.26'
         s.dependency 'GroundTruthDisplaySDK'
         s.frameworks = 'AdSupport', 'SafariServices'
         
+        s.subspec 'Google-Mobile-Ads-SDK' do |default|
+          #This will get bundled unless a subspec is specified
+          default.dependency 'Google-Mobile-Ads-SDK', '~> 7.26'
+        end
+
+        s.pod_target_xcconfig = {
+          'OTHER_LDFLAGS'          => '$(inherited) -undefined dynamic_lookup -ObjC',
+          'FRAMEWORK_SEARCH_PATHS' => '$(PODS_ROOT)/Google-Mobile-Ads-SDK'
+        }
+
     end
     
