@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		37ED40C8519DBF44CEA81698 /* Pods_XADCustomEventForGoogleMobileAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 306FD060254B186E98CD8259 /* Pods_XADCustomEventForGoogleMobileAd.framework */; };
+		38E0A9681FE20EE60038EC8E /* XADCustomEventForAdmob.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E0A9671FE20EE60038EC8E /* XADCustomEventForAdmob.m */; };
+		38E0A96A1FE211840038EC8E /* XADCustomEventForAdmob.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E0A9691FE211830038EC8E /* XADCustomEventForAdmob.h */; };
 		B72C45451E4509AA00317155 /* XADCustomEventInterstitialForAdmob.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72C45441E4509AA00317155 /* XADCustomEventInterstitialForAdmob.swift */; };
 		B72C45491E4509BD00317155 /* XADCustomEventInterstitialForDFP.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72C45481E4509BD00317155 /* XADCustomEventInterstitialForDFP.swift */; };
 		B7C58A891E3ACFDF00AE0090 /* XADCustomEventForGoogleMobileAd.h in Headers */ = {isa = PBXBuildFile; fileRef = B7C58A871E3ACFDF00AE0090 /* XADCustomEventForGoogleMobileAd.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -18,6 +20,8 @@
 /* Begin PBXFileReference section */
 		306FD060254B186E98CD8259 /* Pods_XADCustomEventForGoogleMobileAd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XADCustomEventForGoogleMobileAd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		332D07EDF2441D5531084831 /* Pods-XADCustomEventForGoogleMobileAd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XADCustomEventForGoogleMobileAd.release.xcconfig"; path = "Pods/Target Support Files/Pods-XADCustomEventForGoogleMobileAd/Pods-XADCustomEventForGoogleMobileAd.release.xcconfig"; sourceTree = "<group>"; };
+		38E0A9671FE20EE60038EC8E /* XADCustomEventForAdmob.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XADCustomEventForAdmob.m; sourceTree = "<group>"; };
+		38E0A9691FE211830038EC8E /* XADCustomEventForAdmob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XADCustomEventForAdmob.h; sourceTree = "<group>"; };
 		B4ED3B6CA36D9F2D34F38F80 /* Pods-XADCustomEventForGoogleMobileAd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XADCustomEventForGoogleMobileAd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XADCustomEventForGoogleMobileAd/Pods-XADCustomEventForGoogleMobileAd.debug.xcconfig"; sourceTree = "<group>"; };
 		B72C45441E4509AA00317155 /* XADCustomEventInterstitialForAdmob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XADCustomEventInterstitialForAdmob.swift; sourceTree = "<group>"; };
 		B72C45481E4509BD00317155 /* XADCustomEventInterstitialForDFP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XADCustomEventInterstitialForDFP.swift; sourceTree = "<group>"; };
@@ -78,12 +82,14 @@
 		B7C58A861E3ACFDF00AE0090 /* XADCustomEventForGoogleMobileAd */ = {
 			isa = PBXGroup;
 			children = (
+				38E0A9691FE211830038EC8E /* XADCustomEventForAdmob.h */,
 				B7C58A871E3ACFDF00AE0090 /* XADCustomEventForGoogleMobileAd.h */,
 				B7C58A991E3AD0B200AE0090 /* XADCustomEventForAdmob.swift */,
 				B72C45441E4509AA00317155 /* XADCustomEventInterstitialForAdmob.swift */,
 				B7C58A9A1E3AD0B200AE0090 /* XADCustomEventForDFP.swift */,
 				B72C45481E4509BD00317155 /* XADCustomEventInterstitialForDFP.swift */,
 				B7C58A881E3ACFDF00AE0090 /* Info.plist */,
+				38E0A9671FE20EE60038EC8E /* XADCustomEventForAdmob.m */,
 			);
 			path = XADCustomEventForGoogleMobileAd;
 			sourceTree = "<group>";
@@ -95,6 +101,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38E0A96A1FE211840038EC8E /* XADCustomEventForAdmob.h in Headers */,
 				B7C58A891E3ACFDF00AE0090 /* XADCustomEventForGoogleMobileAd.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,7 +140,7 @@
 				TargetAttributes = {
 					B7C58A831E3ACFDF00AE0090 = {
 						CreatedOnToolsVersion = 8.2.1;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -210,6 +217,7 @@
 				B7C58A9C1E3AD0B200AE0090 /* XADCustomEventForDFP.swift in Sources */,
 				B72C45491E4509BD00317155 /* XADCustomEventInterstitialForDFP.swift in Sources */,
 				B7C58A9B1E3AD0B200AE0090 /* XADCustomEventForAdmob.swift in Sources */,
+				38E0A9681FE20EE60038EC8E /* XADCustomEventForAdmob.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,20 +12,16 @@
       s.source = {
         :git => 'https://github.com/xadrnd/display_sdk_ios.git'
       }
-      s.source_files = 'XADCustomEventForGoogleMobileAd/XADCustomEventForGoogleMobileAd/**/*.{h,m,swift}'
-      
+      s.source_files = 'XADCustomEventForGoogleMobileAd/XADCustomEventForGoogleMobileAd/*.{h,swift}'
+      s.requires_arc = true
         s.dependency 'GroundTruthDisplaySDK'
+        s.dependency 'Google-Mobile-Ads-SDK', '~> 7.26'
         s.frameworks = 'AdSupport', 'SafariServices'
-        
-        s.subspec 'Google-Mobile-Ads-SDK' do |default|
-          #This will get bundled unless a subspec is specified
-          default.dependency 'Google-Mobile-Ads-SDK', '~> 7.26'
-        end
 
         s.pod_target_xcconfig = {
-          'OTHER_LDFLAGS'          => '$(inherited) -undefined dynamic_lookup -ObjC',
-          'FRAMEWORK_SEARCH_PATHS' => '$(PODS_ROOT)/Google-Mobile-Ads-SDK'
+          'OTHER_LDFLAGS'          => '$(inherited) -undefined dynamic_lookup',
+          'FRAMEWORK_SEARCH_PATHS' => '$(PODS_ROOT)/Google-Mobile-Ads-SDK/Frameworks'
+          #'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES'
         }
 
     end
-    
